@@ -72,7 +72,7 @@ namespace NetworkProject.Controllers
 
         public ActionResult Exams()
         {
-            /* check if user had logged in */
+            /* check if user had logged in system */
                 if (Session["ID"] == null || Session["password"] == null || Session["type"] == null)
             {
                 return RedirectToAction("Login", "Login");
