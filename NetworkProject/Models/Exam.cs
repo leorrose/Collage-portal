@@ -20,7 +20,7 @@ namespace NetworkProject.Models
 
         [Key, Column(Order = 1) ]
         [Required]
-        [RegularExpression("A||B", ErrorMessage = "moed can be A or B")]
+        [RegularExpression("A|B", ErrorMessage = "moed can be A or B")]
         public string moed { get; set; }
 
         [Required]

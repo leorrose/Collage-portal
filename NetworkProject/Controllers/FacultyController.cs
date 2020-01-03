@@ -68,7 +68,7 @@ namespace NetworkProject.Controllers
                     /* check if student exist */
                     var student =
                            (from row in usersDb.Users
-                            where row.ID.Equals(courseParticipant.ID)
+                            where row.ID.Equals(courseParticipant.ID) && row.type.Equals("Student")
                             select row).FirstOrDefault();
                     if (student == null)
                     {
@@ -169,6 +169,19 @@ namespace NetworkProject.Controllers
                             TempData["msg"] = "Invalid course Name";
                             return View("ManageCourseSchedule", course);
                         }
+
+                        /* check lecturer exist */
+                        var Lecturer =
+                           (from row in usersDb.Users
+                            where row.ID.Equals(course.lecturer) && row.type.Equals("Lecturer")
+                            select row).FirstOrDefault();
+
+                        if (Lecturer == null)
+                        {
+                            TempData["msg"] = "Lecturer doesnt exist";
+                            return View("ManageCourseSchedule", course);
+                        }
+
                         /* check start time is before end time */
                         if (course.startTime >= course.endTime)
                         {
@@ -226,6 +239,18 @@ namespace NetworkProject.Controllers
                     /* if course doesnt exist */
                     else
                     {
+                        /* check lecturer exist */
+                        var Lecturer =
+                           (from row in usersDb.Users
+                            where row.ID.Equals(course.lecturer) && row.type.Equals("Lecturer")
+                            select row).FirstOrDefault();
+
+                        if (Lecturer == null)
+                        {
+                            TempData["msg"] = "Lecturer doesnt exist";
+                            return View("ManageCourseSchedule", course);
+                        }
+
                         /* check start time is before end time */
                         if (course.startTime >= course.endTime)
                         {
@@ -251,14 +276,7 @@ namespace NetworkProject.Controllers
                             }
                         }
 
-                        courseId.courseId = course.courseId;
-                        courseId.courseName = course.courseName;
-                        courseId.startTime = course.startTime;
-                        courseId.endTime = course.endTime;
-                        courseId.day = course.day;
-                        courseId.className = course.className;
-                        courseId.lecturer = course.lecturer;
-
+                        coursesDb.Courses.Add(course);
                         coursesDb.SaveChanges();
 
                         TempData["goodMsg"] = "Inserted\\updated course";
@@ -430,7 +448,7 @@ namespace NetworkProject.Controllers
                     /* check start time is before end time */
                     if (exam.startTime >= exam.endTime)
                     {
-                        TempData["msg"] = "Course end time must be bigger than course start time";
+                        TempData["msg"] = "Exam end time must be bigger than Exam start time";
                         return View("ManageExams", exam);
                     }
 

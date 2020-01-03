@@ -27,7 +27,7 @@ namespace NetworkProject.Models
         public TimeSpan endTime { get; set; }
 
         [Required]
-        [RegularExpression("Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Satuerday" ,ErrorMessage = "day must be Sunday or Monday or Tuesday or Wednesday or Thursday or Friday or Satuerday")]
+        [RegularExpression("Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Satuerday" ,ErrorMessage = "day must be Sunday or Monday or Tuesday or Wednesday or Thursday or Friday or Satuerday")]
         public string day { get; set; }
 
         [Required]
