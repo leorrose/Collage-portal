@@ -200,13 +200,13 @@ namespace NetworkProject.Controllers
                         /* find all other courses students take */
                         var studentCourses =
                             (from row in courseParticipantDb.CourseParticipants
-                             where studentThatTakeCourse.Contains(row.ID)
+                             where studentThatTakeCourse.Contains(row.ID) && !row.courseId.Equals(course.courseId)
                              select row.courseId).ToList();
 
                         /* get courses schedule + lecturer courses schedule */
                         var courses =
                             (from row in coursesDb.Courses
-                             where studentCourses.Contains(row.courseId) || row.lecturer.Equals(course.lecturer)
+                             where studentCourses.Contains(row.courseId) || row.lecturer.Equals(course.lecturer) && !row.courseId.Equals(course.courseId)
                              select row).ToList();
 
                         /* check no clashs between courses */
@@ -218,6 +218,21 @@ namespace NetworkProject.Controllers
                                 return View("ManageCourseSchedule", course);
                             }
                         }
+
+                        /* get all course with same class and check time doesnt clash */
+                        courses = (from row in coursesDb.Courses
+                                  where row.className.Equals(course.className) && !row.courseId.Equals(course.courseId)
+                                   select row).ToList();
+
+                        foreach (Course x in courses)
+                        {
+                            if (x.startTime < course.endTime && course.startTime < x.endTime && x.day.Equals(course.day))
+                            {
+                                TempData["msg"] = "Course class clashes with other courses";
+                                return View("ManageCourseSchedule", course);
+                            }
+                        }
+
 
                         courseId.courseId = course.courseId;
                         courseId.courseName = course.courseName;
@@ -272,6 +287,20 @@ namespace NetworkProject.Controllers
                             if (x.startTime < course.endTime && course.startTime < x.endTime && x.day.Equals(course.day))
                             {
                                 TempData["msg"] = "Course time clashes with lecturer schedule";
+                                return View("ManageCourseSchedule", course);
+                            }
+                        }
+
+                        /* get all course with same class and check time doesnt clash */
+                        courses = (from row in coursesDb.Courses
+                                   where row.className.Equals(course.className)
+                                   select row).ToList();
+
+                        foreach (Course x in courses)
+                        {
+                            if (x.startTime < course.endTime && course.startTime < x.endTime && x.day.Equals(course.day))
+                            {
+                                TempData["msg"] = "Course class clashes with other courses";
                                 return View("ManageCourseSchedule", course);
                             }
                         }
@@ -457,6 +486,58 @@ namespace NetworkProject.Controllers
                     {
                         TempData["msg"] = "Exam cant be in the past";
                         return View("ManageExams", exam);
+                    }
+
+
+                    /* get all exams with same class and check time doesnt clash */
+                    var exams = (from row in exmaDb.Exams
+                               where row.className.Equals(exam.className)
+                               select row).ToList();
+
+                    foreach (Exam x in exams)
+                    {
+                        if (x.startTime < exam.endTime && exam.startTime < x.endTime && x.date.Equals(exam.date))
+                        {
+                            TempData["msg"] = "Exam class clashes with other Exams";
+                            return View("ManageExams", exam);
+                        }
+                    }
+
+                    /* check moed a is before b */
+                    if(exam.moed == "A")
+                    {
+                        /* check if moed B exam exist */
+                        var moedBExam =
+                           (from row in exmaDb.Exams
+                            where row.courseId.Equals(exam.courseId) && row.moed.Equals("B")
+                            select row).FirstOrDefault();
+
+                        if (moedBExam != null)
+                        {
+                            if (moedBExam.date <= exam.date)
+                            {
+                                TempData["msg"] = "Moed A needs to be before Moed B";
+                                return View("ManageExams", exam);
+                            }
+                        }
+                    }
+
+                    if (exam.moed == "B")
+                    {
+                        /* check if moed A exam exist */
+                        var moedAExam =
+                           (from row in exmaDb.Exams
+                            where row.courseId.Equals(exam.courseId) && row.moed.Equals("A")
+                            select row).FirstOrDefault();
+
+                        if (moedAExam != null)
+                        {
+                            if (moedAExam.date >= exam.date)
+                            {
+                                TempData["msg"] = "Moed A needs to be before Moed B";
+                                return View("ManageExams", exam);
+                            }
+                        }
                     }
 
 

@@ -13,7 +13,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body style="background-color:#3AAFA9; color: white;">
+<body style="background-color:#598aa8; color: white;">
     <div class="container">
         <div class="row">
             <h1 class="display-1 text-center"> Welcome Back @Session["name"] @Session["lastName"] </h1>
@@ -56,6 +56,16 @@
                 </iframe>
                 <br />
                 <a href="@Url.Action("InsertGrades","Lecturer")" target="_self" style="color: white"> Full Insert\Update Grade </a>
+            </div>
+            <br />
+        </div>
+        <div class="row">
+            <div>
+                <iframe src="@Url.Action("Chat","Chat")" style="width:100%; height:250px; border: 1px solid #17252A;">
+                    <p> Your Browser doesnt support iframe please change browser</p>
+                </iframe>
+                <br />
+                <a href="@Url.Action("Chat","Chat")" target="_self" style="color: white"> Full Chat </a>
             </div>
             <br />
         </div>
