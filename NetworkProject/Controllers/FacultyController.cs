@@ -391,9 +391,10 @@ namespace NetworkProject.Controllers
                 /* check if student exist */
                 var student =
                        (from row in usersDb.Users
-                        where row.ID.Equals(grade.ID)
+                        where row.ID.Equals(grade.ID) && row.type.Equals("Student")
                         select row).FirstOrDefault();
-                if (exam == null)
+
+                if (student == null)
                 {
                     TempData["msg"] = "Student doesnt exist";
                     return View("InsertGrades", grade);

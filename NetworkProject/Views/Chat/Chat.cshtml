@@ -179,11 +179,16 @@
             // Start the connection.
             $.connection.hub.start().done(function () {
                 $('#sendmessage').click(function () {
-                    // Call the Send method on the hub.
-                    chat.server.send(receiver, $('#message').val());
-                    chat.server.send($('#displayId').val(), $('#message').val());
-                    // Clear text box and reset focus for next comment.
-                    $('#message').val('').focus();
+                    if (receiver != "") {
+                        // Call the Send method on the hub.
+                        chat.server.send(receiver, $('#message').val());
+                        chat.server.send($('#displayId').val(), $('#message').val());
+                        // Clear text box and reset focus for next comment.
+                        $('#message').val('').focus();
+                    }
+                    else {
+                        $('#message').val('').focus();
+                    }
                 });
             });
         });

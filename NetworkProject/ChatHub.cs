@@ -38,6 +38,11 @@ namespace NetworkProject
             {
                 return;
             }
+            if (userIdFromDict.Equals(userId))
+            {
+                Clients.Client(connectionId).appendMessage(userIdFromDict, message);
+                return;
+            }
             using (ChatDal chatdb = new ChatDal())
             {
                 Message newMsg = new Message();
