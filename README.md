@@ -32,6 +32,7 @@ application includes 4 types of users (Student, Faculty, Lecturer and Admin), ea
 
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/user-insert.gif)
 
+<hr/>
 
 <b> In order to run the application: </b>
 1. clone this repository.
