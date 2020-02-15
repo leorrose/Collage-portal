@@ -3,7 +3,7 @@ A collage portal application including 4 types of users (Student, Faculty, Lectu
 each user has differnt option-
 
 <hr/>
-<b>Student:</b><br/>
+<b>Student:</b> <br/>
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/student.gif)
 
 <b>Faculty:</b><br/><hr/>
