@@ -2,19 +2,19 @@
 A collage portal application including 4 types of users (Student, Faculty, Lecturer and Admin). 
 each user has differnt option-
 
-<b>Student:</b><br/><br/><hr/>
+<b>Student:</b><br/><hr/>
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/student.gif)
 
-<b>Faculty:</b><br/><br/><hr/>
+<b>Faculty:</b><br/><hr/>
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/faculty.gif)
 
-<b>Lecturer:</b><br/><br/><hr/>
+<b>Lecturer:</b><br/><hr/>
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/lecturer.gif)
 
-<b>Admin:</b><br/><br/><hr/>
+<b>Admin:</b><br/><hr/>
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/user-insert.gif)
 
-<b>All users can chat online:</b><br/><br/><hr/>
+<b>All users can chat online:</b><br/><hr/>
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/user-insert.gif)
 
 This app was created with asp.net MVC, html, css, javaScript, jQuery, signalR, MySQL.
