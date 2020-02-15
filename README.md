@@ -30,7 +30,7 @@ application includes 4 types of users (Student, Faculty, Lecturer and Admin), ea
 <b>All users can chat online:</b>
 <br/><br/>
 
-![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/user-insert.gif)
+![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/online%20chat.gif)
 
 <hr/>
 
