@@ -3,7 +3,7 @@ A collage portal application created with <b> asp.net MVC, html, css, javaScript
 application includes 4 types of users (Student, Faculty, Lecturer and Admin), each user has different options.
 
 <hr/>
-# Student:
+<b>Student:</b>
 <br/><br/>
 
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/student.gif)
