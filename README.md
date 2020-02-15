@@ -1,4 +1,4 @@
 # Collage-portal
 A collage portal written in asp.net MVC 
 
-[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=gnQ3xLyk9qo&feature=youtu.be)
+<img src="https://github.com/leorrose/Collage-portal/blob/master/Videos/faculty.gif" height="100px" width="100px" alt="A demo video"/>
