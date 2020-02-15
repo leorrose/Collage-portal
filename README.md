@@ -9,19 +9,27 @@ each user has different options.
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/student.gif)
 
 <hr/>
-<b>Faculty:</b><br/>
+<b>Faculty:</b>
+<br/><br/>
+
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/faculty.gif)
 
 <hr/>
-<b>Lecturer:</b><br/>
+<b>Lecturer:</b>
+<br/><br/>
+
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/lecturer.gif)
 
 <hr/>
-<b>Admin:</b><br/>
+<b>Admin:</b>
+<br/><br/>
+
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/user-insert.gif)
 
 <hr/>
-<b>All users can chat online:</b><br/>
+<b>All users can chat online:</b>
+<br/><br/>
+
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/user-insert.gif)
 
 This app was created with asp.net MVC, html, css, javaScript, jQuery, signalR, MySQL.
