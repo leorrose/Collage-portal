@@ -4,7 +4,7 @@ each user has different options.
 
 <hr/>
 <b>Student:</b>
-<br/>
+<br/><br/>
 
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/student.gif)
 
