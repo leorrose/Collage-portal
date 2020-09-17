@@ -4,7 +4,24 @@
 
 An asp.net mvc collage portal application.
 
-This Project was created with <b> asp.net MVC, html, css, javaScript, jQuery, signalR, MySQL </b>.
+This Project was created with <b> asp.net MVC framework (only works on windows), html, css, javaScript, jQuery, signalR, SQL </b>.
+
+The project was tested only with visual studio.
+
+### Project Run (Windows):
+- clone this repository.
+- open visual studio.
+- go to file -> open -> Project\Solution
+- select NetworkProject.sln
+- run the program (press start in visual studio)
+
+Existing users:
+- Student - Id = 123456789, password = user1
+- Faculty - Id = 987654321, password = user2
+- Lecturer - Id = 123451234, password = user3
+- Admin - Id = 123451235, password = user4
+
+### Demo:
 
 Application includes 4 types of users (Student, Faculty, Lecturer and Admin), each user has different options.
 
@@ -39,12 +56,6 @@ Application includes 4 types of users (Student, Faculty, Lecturer and Admin), ea
 ![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/online%20chat.gif)
 
 <hr/>
-
-<b> In order to run the application: </b>
-1. clone this repository.
-2. run the db script.
-3. change db connection strings in web.config .
-4. run application.
 
 Please let me know if you find bugs or something that needs to be fixed.
 
