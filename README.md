@@ -1,6 +1,12 @@
 # Collage-portal
-A collage portal application created with <b> asp.net MVC, html, css, javaScript, jQuery, signalR, MySQL </b>. 
-application includes 4 types of users (Student, Faculty, Lecturer and Admin), each user has different options.
+
+## Project Explanation
+
+An asp.net mvc collage portal application.
+
+This Project was created with <b> asp.net MVC, html, css, javaScript, jQuery, signalR, MySQL </b>.
+
+Application includes 4 types of users (Student, Faculty, Lecturer and Admin), each user has different options.
 
 <hr/>
 <b>Student:</b>
@@ -43,5 +49,3 @@ application includes 4 types of users (Student, Faculty, Lecturer and Admin), ea
 Please let me know if you find bugs or something that needs to be fixed.
 
 <b> Hope you enjoy. </b>
-
-
