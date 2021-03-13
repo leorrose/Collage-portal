@@ -1,8 +1,8 @@
-# Collage-portal
+# College-portal
 
 ## Project Explanation
 
-An asp.net mvc collage portal application.
+An asp.net mvc college portal application.
 
 This Project was created with <b> asp.net MVC framework (only works on windows), html, css, javaScript, jQuery, signalR, SQL </b>.
 
@@ -29,19 +29,19 @@ Application includes 4 types of users (Student, Faculty, Lecturer and Admin), ea
 <b>Student:</b>
 <br/><br/>
 
-![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/student.gif)
+![ALT "A demo video"](https://github.com/leorrose/College-portal/blob/master/Videos/student.gif)
 
 <hr/>
 <b>Faculty:</b>
 <br/><br/>
 
-![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/faculty.gif)
+![ALT "A demo video"](https://github.com/leorrose/College-portal/blob/master/Videos/faculty.gif)
 
 <hr/>
 <b>Lecturer:</b>
 <br/><br/>
 
-![ALT "A demo video"](https://github.com/leorrose/Collage-portal/blob/master/Videos/lecturer.gif)
+![ALT "A demo video"](https://github.com/leorrose/College-portal/blob/master/Videos/lecturer.gif)
 
 <hr/>
 <b>Admin:</b>
